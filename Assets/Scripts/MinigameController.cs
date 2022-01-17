@@ -21,7 +21,7 @@ public class MinigameController : MonoBehaviour
         {
             Debug.Log("start minigame ID: " + id);
             LevelLoader.currentLoader.LoadModule(id);
-            TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
+            //TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
             GameEvent.current.boolsCheck[id - 1] = false;
         }
     }

@@ -71,6 +71,12 @@ public class LevelLoader : MonoBehaviour
         LoadLevelChunk(_levelChunk.MainLevel);
     }
 
+    public void LoadGameOver()
+    {
+        UnloadLevelChunk(_levelChunk.MainLevel);
+        SceneManager.LoadScene(5);
+    }
+
     public void LoadModule(int id)
     {
         if(id == (int)_levelChunk.TypingModule)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimerRoundScore : MonoBehaviour
 {
@@ -59,5 +60,13 @@ public class TimerRoundScore : MonoBehaviour
     void EndGameCondition()
     {
         Debug.Log("End game condition reached!");
+        PlayerPrefs.SetInt("RoundScores", WinCount);
+        Invoke("GameOver", 4.0f);
+        
+    }
+
+    void GameOver()
+    {
+        LevelLoader.currentLoader.LoadGameOver();
     }
 }

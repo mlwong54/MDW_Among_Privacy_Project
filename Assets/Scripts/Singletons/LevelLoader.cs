@@ -14,11 +14,11 @@ public class LevelLoader : MonoBehaviour
 
     private enum _levelChunk
     {
-        MainLevel =0,
-        TypingModule =1,
-        Module2 =2,
-        Module3 =3,
-        Module4 =4
+        MainLevel =2,
+        TypingModule =3,
+        Module2 =4,
+        Module3 =5,
+        Module4 =6
     }
 
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
@@ -74,11 +74,12 @@ public class LevelLoader : MonoBehaviour
     public void LoadGameOver()
     {
         UnloadLevelChunk(_levelChunk.MainLevel);
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(7);
     }
 
     public void LoadModule(int id)
     {
+        id = id + 2;
         if(id == (int)_levelChunk.TypingModule)
         {
             UnloadLevelChunk(_levelChunk.MainLevel);

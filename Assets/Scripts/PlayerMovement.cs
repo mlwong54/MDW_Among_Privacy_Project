@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{
-
-    public float speed = 5.0f;
+{   public float speed = 5.0f;
 
     private Rigidbody2D rb;
 

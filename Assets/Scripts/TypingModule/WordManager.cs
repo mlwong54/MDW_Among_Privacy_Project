@@ -97,6 +97,7 @@ public class WordManager : MonoBehaviour
         {
             TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+100);
         }
+        TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
     }
 
     private void FixedUpdate()

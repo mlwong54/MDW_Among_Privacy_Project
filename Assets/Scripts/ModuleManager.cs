@@ -56,5 +56,6 @@ public class ModuleManager: MonoBehaviour
         {
             TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+100);
         }
+        TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
     }
 }

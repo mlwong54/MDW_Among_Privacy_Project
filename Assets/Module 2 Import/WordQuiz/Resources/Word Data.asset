@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b762a7796d94449896cd40528add32, type: 3}
+  m_Name: Word Data
+  m_EditorClassIdentifier: 
+  questions:
+  - questionImage: {fileID: 21300000, guid: fe3d2046c0aa2d745a7ded3de49787dc, type: 3}
+    answer: security
+  - questionImage: {fileID: 21300000, guid: 36d0fe0ad324d604aabfa53b52d036ba, type: 3}
+    answer: password
+  - questionImage: {fileID: 21300000, guid: c813b47317eb9394a94c1129eb95abac, type: 3}
+    answer: privacy
+  - questionImage: {fileID: 21300000, guid: f222582d019f613499f6058ff1a5556f, type: 3}
+    answer: firewall
+  - questionImage: {fileID: 21300000, guid: 765c64de429fc7a40954f6d67108f1c3, type: 3}
+    answer: hacker
+  - questionImage: {fileID: 21300000, guid: 938349f254ab7ac469ea19660f11c01d, type: 3}
+    answer: information
+  - questionImage: {fileID: 21300000, guid: 306b672c6c89b5243ab3d4c73b892563, type: 3}
+    answer: antivirus
+  - questionImage: {fileID: 21300000, guid: 0a51f02ff4715d144a972f5b3809799c, type: 3}
+    answer: trojan
+  - questionImage: {fileID: 21300000, guid: c0ab350fed32e8940b04a2d117a67119, type: 3}
+    answer: captcha
+  - questionImage: {fileID: 21300000, guid: c4d0c5a2c90c7f94e8282dcfd45c607c, type: 3}
+    answer: account
+  - questionImage: {fileID: 21300000, guid: e3b0ea86328dbad4aad7c00b3da0481b, type: 3}
+    answer: download
+  - questionImage: {fileID: 21300000, guid: c06f6401de7f20148b29d7c237bb60bf, type: 3}
+    answer: social
+  - questionImage: {fileID: 21300000, guid: 89bd00dcbeb50d8498bbffd5bece9f85, type: 3}
+    answer: internet
+  - questionImage: {fileID: 21300000, guid: 68c52ee7cc7968e48b5ac38233f2381b, type: 3}
+    answer: protection
+  - questionImage: {fileID: 21300000, guid: 6761ceed69d4b8545bcafdfb18e4a471, type: 3}
+    answer: backup

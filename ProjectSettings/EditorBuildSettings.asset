@@ -18,11 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/TypingScene.unity
     guid: cea82e335de65eb49a934cde0264ad5f
   - enabled: 1
-    path: Assets/Scenes/Module2.unity
-    guid: 58a2867e314a653419c28db03dd97a05
+    path: Assets/Scenes/mazegame.unity
+    guid: 9bf1aa28ee1b42246ac34e5daad28447
   - enabled: 1
-    path: Assets/Scenes/Module3.unity
-    guid: c922af6923f8fbb41b21d7f1fb9a6b3e
+    path: Assets/Scenes/eykin.unity
+    guid: 5f3010a3193a2024195d1194c43f08f5
   - enabled: 1
     path: Assets/Scenes/Module4.unity
     guid: 59f8083527ccd204f97219c1e4436d5d

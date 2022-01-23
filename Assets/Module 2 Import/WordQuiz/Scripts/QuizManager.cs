@@ -137,7 +137,7 @@ public class QuizManager : MonoBehaviour
                 Debug.Log("Correct Answer");
                 gameStatus = GameStatus.Next; //set the game status
                 currentQuestionIndex++; //increase currentQuestionIndex
-
+                popupMenu();
                 //if currentQuestionIndex is less that total available questions
                 if (currentQuestionIndex < questionDataScriptable.questions.Count)
                 {
@@ -148,6 +148,11 @@ public class QuizManager : MonoBehaviour
                     Debug.Log("Game Complete"); //else game is complete
                     gameComplete.SetActive(true);
                 }
+            }
+            else
+            {
+                Debug.Log("Wrong Answer");
+                popupMenu();
             }
         }
     }
@@ -165,6 +170,10 @@ public class QuizManager : MonoBehaviour
         }
     }
 
+    public void popupMenu()
+    {
+        Debug.Log("A menu will showup!");
+    }
 }
 
 [System.Serializable]

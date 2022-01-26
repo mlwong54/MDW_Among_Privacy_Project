@@ -8,7 +8,10 @@ using UnityEngine.UI;
 public class QuizManager : MonoBehaviour
 {
     public static QuizManager instance; //Instance to make is available in other scripts without reference
-
+    
+    [SerializeField]private AnswerAnimation textAnim;
+    [SerializeField]
+    private ModuleManager moduleManager;
     [SerializeField] private GameObject gameComplete;
     //Scriptable data which store our questions data
     [SerializeField] private QuizDataScriptable questionDataScriptable;
@@ -137,7 +140,7 @@ public class QuizManager : MonoBehaviour
                 Debug.Log("Correct Answer");
                 gameStatus = GameStatus.Next; //set the game status
                 currentQuestionIndex++; //increase currentQuestionIndex
-                popupMenu();
+                popupMenu("Correct!");
                 //if currentQuestionIndex is less that total available questions
                 if (currentQuestionIndex < questionDataScriptable.questions.Count)
                 {
@@ -146,13 +149,14 @@ public class QuizManager : MonoBehaviour
                 else
                 {
                     Debug.Log("Game Complete"); //else game is complete
-                    gameComplete.SetActive(true);
+                    //gameComplete.SetActive(true);
+                    moduleManager.EndGame();
                 }
             }
             else
             {
-                Debug.Log("Wrong Answer");
-                popupMenu();
+                //Debug.Log("Wrong Answer");
+                popupMenu("False!");
             }
         }
     }
@@ -170,9 +174,9 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    public void popupMenu()
+    public void popupMenu(string value)
     {
-        Debug.Log("A menu will showup!");
+        textAnim.SetTextEffect(value);
     }
 }
 

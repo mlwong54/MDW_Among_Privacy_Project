@@ -14,6 +14,10 @@ public class WordManager : MonoBehaviour
     private Word activeWord;
     public int count;
     public bool endGame;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private GameObject explosionEffect;
 
     private void Start()
     {
@@ -70,17 +74,33 @@ public class WordManager : MonoBehaviour
         }
     }
 
-    public void GameLose()
+    public void GameWin()
     {
         words.Clear();
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
-        {    
+        {
+            Instantiate(explosionEffect, enemy.transform.position, Quaternion.identity);
+            Destroy(enemy);
+        }
+        UpdateWinScore();
+        Invoke("ReturnToMain", 2.0f);
+    }
+
+    /*public void GameLose()
+    {
+        words.Clear();
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Destroy(player);
+        Instantiate(explosionEffect, player.transform.position, Quaternion.identity);
+        foreach (GameObject enemy in enemies)
+        {
+            Instantiate(explosionEffect, enemy.transform.position, Quaternion.identity); 
             Destroy(enemy);
         }
         UpdateWinScore();
         ReturnToMain();
-    }
+    }*/
 
     public void ReturnToMain()
     {
@@ -109,7 +129,7 @@ public class WordManager : MonoBehaviour
 
         if (endGame && limitUpdate ==false)
         {
-            GameLose();
+            GameWin();
             count = 10;
             limitUpdate = true;
         }

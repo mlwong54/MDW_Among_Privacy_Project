@@ -193,6 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 8722311213253786840}
+  explosionEffect: {fileID: 707451822243819800, guid: 859c50ff1151b334f9881911e80d21e7,
+    type: 3}
+  allTexts: {fileID: 0}
 --- !u!61 &1349048919844873579
 BoxCollider2D:
   m_ObjectHideFlags: 0

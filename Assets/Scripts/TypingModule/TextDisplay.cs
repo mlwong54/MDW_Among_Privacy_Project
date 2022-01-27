@@ -6,6 +6,7 @@ using TMPro;
 public class TextDisplay : MonoBehaviour
 {
     public TextMeshPro Text;
+    public GameObject explosionEffect;
     public void SetWord(string word)
     {
         Text.text = word;
@@ -20,6 +21,7 @@ public class TextDisplay : MonoBehaviour
     public void RemoveWord()
     {
         Destroy(transform.parent.gameObject);
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
     }
 
 }

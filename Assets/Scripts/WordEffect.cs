@@ -24,8 +24,17 @@ public class WordEffect : MonoBehaviour
         {
             currentText = fullText[num].Substring(0, i);
             this.GetComponent<TextMeshProUGUI>().text = currentText;
-            if(i==fullText.Length)
-            { nextButton.SetActive(true); }
+            if(i==fullText[num].Length)
+            {
+                if (num < 1)
+                { 
+                    nextButton.SetActive(true); 
+                }
+                else
+                {
+                    startButton.SetActive(true);
+                } 
+            }
             yield return new WaitForSeconds(delay);
         }
     }
@@ -37,10 +46,6 @@ public class WordEffect : MonoBehaviour
             StartCoroutine(ShowText(count));
             nextButton.SetActive(false);
         }
-        else
-        {
-            nextButton.SetActive(false);
-            startButton.SetActive(true);
-        }
+        
     }
 }

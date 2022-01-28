@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown("space"))
+        {
+            rb.velocity = new Vector3(0, 14f, 0);
+        }
     }
 
     private void FixedUpdate()

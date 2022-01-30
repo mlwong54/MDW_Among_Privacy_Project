@@ -140,7 +140,7 @@ public class QuizManager : MonoBehaviour
                 Debug.Log("Correct Answer");
                 gameStatus = GameStatus.Next; //set the game status
                 currentQuestionIndex++; //increase currentQuestionIndex
-                popupMenu("Correct!");
+                popupMenu("Correct!", 200);
                 //if currentQuestionIndex is less that total available questions
                 if (currentQuestionIndex < questionDataScriptable.questions.Count)
                 {
@@ -149,14 +149,13 @@ public class QuizManager : MonoBehaviour
                 else
                 {
                     Debug.Log("Game Complete"); //else game is complete
-                    //gameComplete.SetActive(true);
-                    moduleManager.EndGame();
+                    StartCoroutine(EndGameCount());
                 }
             }
             else
             {
                 //Debug.Log("Wrong Answer");
-                popupMenu("False!");
+                popupMenu("False!", -400);
             }
         }
     }
@@ -174,9 +173,18 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    public void popupMenu(string value)
+    public void popupMenu(string value, int num)
     {
         textAnim.SetTextEffect(value);
+        TimerRoundScore.CurrentScoreHandler.WinTextUpdate(num);
+    }
+
+    IEnumerator EndGameCount()
+    {
+        yield return new WaitForSeconds(1.0f);
+        gameComplete.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        moduleManager.EndGame();
     }
 }
 

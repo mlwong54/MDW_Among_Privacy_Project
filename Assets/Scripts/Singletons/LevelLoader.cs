@@ -71,10 +71,24 @@ public class LevelLoader : MonoBehaviour
         LoadLevelChunk(_levelChunk.MainLevel);
     }
 
-    public void LoadGameOver()
+    public void LoadGameOverWin()
     {
         UnloadLevelChunk(_levelChunk.MainLevel);
-        SceneManager.LoadScene(7);
+        UnloadLevelChunk(_levelChunk.TypingModule);
+        UnloadLevelChunk(_levelChunk.Module2);
+        UnloadLevelChunk(_levelChunk.Module3);
+        UnloadLevelChunk(_levelChunk.Module4);
+        SceneManager.LoadScene(8);
+    }
+
+    public void LoadGameOverLose()
+    {
+        UnloadLevelChunk(_levelChunk.MainLevel);
+        UnloadLevelChunk(_levelChunk.TypingModule);
+        UnloadLevelChunk(_levelChunk.Module2);
+        UnloadLevelChunk(_levelChunk.Module3);
+        UnloadLevelChunk(_levelChunk.Module4);
+        SceneManager.LoadScene(9);
     }
 
     public void LoadModule(int id)

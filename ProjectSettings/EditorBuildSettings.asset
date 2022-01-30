@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TypingScene.unity
     guid: cea82e335de65eb49a934cde0264ad5f
   - enabled: 1
-    path: Assets/Scenes/mazegame.unity
-    guid: 9bf1aa28ee1b42246ac34e5daad28447
+    path: Assets/Scenes/Module2.unity
+    guid: 58a2867e314a653419c28db03dd97a05
   - enabled: 1
     path: Assets/Scenes/eykin.unity
     guid: 5f3010a3193a2024195d1194c43f08f5
@@ -30,8 +30,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Module4.unity
     guid: 59f8083527ccd204f97219c1e4436d5d
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/Scenes/GameOverWin.unity
     guid: 32abe30ffcbf81448b8be0715dc7af01
+  - enabled: 1
+    path: Assets/Scenes/GameOverLose.unity
+    guid: ace26565fc0303a45ab2c63052d83754
   - enabled: 1
     path: Assets/Scenes/Leaderboard.unity
     guid: 17929268c3b25c1469c130a30b895a57

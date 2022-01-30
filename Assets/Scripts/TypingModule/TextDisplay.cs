@@ -22,6 +22,8 @@ public class TextDisplay : MonoBehaviour
     {
         Destroy(transform.parent.gameObject);
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+100);
+        //TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
     }
 
 }

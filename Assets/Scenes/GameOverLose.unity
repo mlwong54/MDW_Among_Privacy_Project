@@ -559,8 +559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.05
   fullText:
-  - you get back to your home and found out your privacy is under attacked!
-  - finish all 4 games within the time limit!
+  - your whole account is hacked by unknown user
+  - you lose your account. retry?
   nextButton: {fileID: 49838682}
   startButton: {fileID: 1186696539}
 --- !u!114 &1637238534

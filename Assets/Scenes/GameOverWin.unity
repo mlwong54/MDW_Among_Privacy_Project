@@ -365,7 +365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: you have secured your account!
+  m_text: 'you have secured your account! your final scores are:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4122877ceadbce04fa1ac3e2a4a7dbe0, type: 2}
   m_sharedMaterial: {fileID: -8565974087406966830, guid: 4122877ceadbce04fa1ac3e2a4a7dbe0,
@@ -723,7 +723,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

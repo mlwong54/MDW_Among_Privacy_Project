@@ -559,7 +559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0.05
   fullText:
-  - your whole account is hacked by unknown user
+  - you failed the game. please finish it within the given time limit and make sure
+    you get scores over 1000 to secure your account.
   - you lose your account. retry?
   nextButton: {fileID: 49838682}
   startButton: {fileID: 1186696539}

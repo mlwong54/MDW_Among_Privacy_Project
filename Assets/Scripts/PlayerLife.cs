@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerLife : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rg;
     [SerializeField] private AudioSource DeathSoundEffect;
+    [SerializeField] private TextMeshProUGUI uiText;
+    [SerializeField] private GameObject uiMenu;
 
     private void Start()
     {
@@ -24,6 +27,8 @@ public class PlayerLife : MonoBehaviour
 
     private void Die()
     {
+        uiText.text = "you lose";
+        uiMenu.SetActive(true);
         DeathSoundEffect.Play();
         anim.SetTrigger("dead");
         rg.bodyType = RigidbodyType2D.Static;

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Finish : MonoBehaviour
 {
     private AudioSource finishSound;
-
+    [SerializeField] private TextMeshProUGUI uiText;
+    [SerializeField] private GameObject uiMenu;
     private bool LevelCompleted = false;
     private void Start()
     {
@@ -17,6 +19,8 @@ public class Finish : MonoBehaviour
     {
         if(collision.gameObject.name == "Player" && !LevelCompleted)
         {
+            uiText.text = "you win";
+            uiMenu.SetActive(true);
             finishSound.Play();
             LevelCompleted = true;
             Invoke("CompleteLevel", 2f);

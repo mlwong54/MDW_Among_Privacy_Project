@@ -43,7 +43,7 @@ public class TimerRoundScore : MonoBehaviour
     public void RoundTextUpdate()
     {
         RoundCount++;
-        roundText.text = RoundCount.ToString();
+        roundText.text = RoundCount.ToString() + "/4 cleared";
 
         if(RoundCount >=4)
         {

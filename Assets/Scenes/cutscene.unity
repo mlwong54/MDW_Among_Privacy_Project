@@ -560,7 +560,7 @@ MonoBehaviour:
   delay: 0.05
   fullText:
   - you get back to your home and found out your privacy is under attacked!
-  - finish all 4 games within the time limit!
+  - finish all 4 games and get a minimum 1000 score within the time limit!
   nextButton: {fileID: 49838682}
   startButton: {fileID: 1186696539}
 --- !u!114 &1637238534

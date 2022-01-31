@@ -31,7 +31,9 @@ public class PlayerLife : MonoBehaviour
 
     private void RestartLvl()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        TimerRoundScore.CurrentScoreHandler.WinTextUpdate(-1000);
+        TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
+        LevelLoader.currentLoader.LoadMainModule();
     }
 
 

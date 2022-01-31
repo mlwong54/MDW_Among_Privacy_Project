@@ -26,7 +26,9 @@ public class Finish : MonoBehaviour
 
     private void CompleteLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+1000);
+        TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
+        LevelLoader.currentLoader.LoadMainModule();
     }
 
 }

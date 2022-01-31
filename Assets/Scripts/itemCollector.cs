@@ -16,6 +16,7 @@ public class itemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             itemCollected++;
             itemText.text = "Item Collected: " + itemCollected;
+            TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+100);
         }
     }
     

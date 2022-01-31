@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TypingScene.unity
     guid: cea82e335de65eb49a934cde0264ad5f
   - enabled: 1
-    path: Assets/Scenes/Module2.unity
-    guid: 58a2867e314a653419c28db03dd97a05
+    path: Assets/Scenes/Platformer.unity
+    guid: d71324f89e7a0ea47bbc6acf6dc5f270
   - enabled: 1
     path: Assets/Scenes/eykin.unity
     guid: 5f3010a3193a2024195d1194c43f08f5

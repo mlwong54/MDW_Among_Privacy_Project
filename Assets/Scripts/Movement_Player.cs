@@ -9,10 +9,12 @@ public class Movement_Player : MonoBehaviour
     private Animator animator;
     private BoxCollider2D coll;
     
+    
     private float directionX = 0f;
     [SerializeField]private float movespeed = 7f;
     [SerializeField]private float jumpforce = 14f;
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private AudioSource jumpSoundEffect;
 
     private enum MovementState {idle, running, jumping, falling}
 
@@ -35,6 +37,7 @@ public class Movement_Player : MonoBehaviour
         if(Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpforce);
+            jumpSoundEffect.Play();
         }
 
         UpdateAnimationState();

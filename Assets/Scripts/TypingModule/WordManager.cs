@@ -14,6 +14,15 @@ public class WordManager : MonoBehaviour
     private Word activeWord;
     public int count;
     public bool endGame;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private GameObject explosionEffect;
+    [SerializeField]
+    private GameObject winLosePanel;
+    [SerializeField]
+    private TextMeshProUGUI winLoseText;
+
 
     private void Start()
     {
@@ -70,17 +79,19 @@ public class WordManager : MonoBehaviour
         }
     }
 
-    public void GameLose()
+    public void GameWin()
     {
         words.Clear();
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
-        {    
+        {
+            Instantiate(explosionEffect, enemy.transform.position, Quaternion.identity);
             Destroy(enemy);
         }
         UpdateWinScore();
-        ReturnToMain();
+        Invoke("ReturnToMain", 2.0f);
     }
+
 
     public void ReturnToMain()
     {
@@ -89,13 +100,16 @@ public class WordManager : MonoBehaviour
 
     public void UpdateWinScore()
     {
-        if(winLose ==false)
+        winLosePanel.SetActive(true);
+        if (winLose ==false)
         {
-            TimerRoundScore.CurrentScoreHandler.WinTextUpdate(-100);
+            winLoseText.text = "YOU LOSE";
+            TimerRoundScore.CurrentScoreHandler.WinTextUpdate(-1000);
         }
         else
         {
-            TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+100);
+            winLoseText.text = "YOU WIN";
+            TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+500);
         }
         TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();
     }
@@ -109,9 +123,9 @@ public class WordManager : MonoBehaviour
 
         if (endGame && limitUpdate ==false)
         {
-            GameLose();
-            count = 10;
-            limitUpdate = true;
+                GameWin();
+                count = 10;
+                limitUpdate = true;
         }
     }
 }

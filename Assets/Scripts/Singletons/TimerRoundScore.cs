@@ -36,20 +36,31 @@ public class TimerRoundScore : MonoBehaviour
 
         if(timerValue <=0)
         {
-            EndGameCondition();
+            EndLoseGameCondition();
         }
     }
 
     public void RoundTextUpdate()
     {
         RoundCount++;
-        roundText.text = RoundCount.ToString();
+        roundText.text = RoundCount.ToString() + "/4 cleared";
 
         if(RoundCount >=4)
         {
-            EndGameCondition();
+            Debug.Log(WinCount);
+            if (WinCount>=0)
+            {
+                Debug.Log("your wincount trigger");
+                EndWinGameCondition();
+            }
+            else
+            {
+                Debug.Log("your wincount trigger not here");
+                EndLoseGameCondition();
+            }
         }
     }
+
 
     public void WinTextUpdate(int value)
     {
@@ -57,16 +68,27 @@ public class TimerRoundScore : MonoBehaviour
         winText.text = WinCount.ToString();
     }
 
-    void EndGameCondition()
+    void EndWinGameCondition()
     {
-        Debug.Log("End game condition reached!");
+        //Debug.Log("End game condition reached!");
         PlayerPrefs.SetInt("RoundScores", WinCount);
-        Invoke("GameOver", 4.0f);
+        Invoke("GameOverWin", 3.0f);
         
     }
 
-    void GameOver()
+    void EndLoseGameCondition()
     {
-        LevelLoader.currentLoader.LoadGameOver();
+        PlayerPrefs.SetInt("RoundScores", WinCount);
+        Invoke("GameOverLose", 3.0f);
+    }
+
+    void GameOverWin()
+    {
+        LevelLoader.currentLoader.LoadGameOverWin();
+    }
+
+    void GameOverLose()
+    {
+        LevelLoader.currentLoader.LoadGameOverLose();
     }
 }

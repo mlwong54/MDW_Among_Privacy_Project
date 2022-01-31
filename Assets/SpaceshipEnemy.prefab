@@ -193,6 +193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 8722311213253786840}
+  explosionEffect: {fileID: 707451822243819800, guid: 859c50ff1151b334f9881911e80d21e7,
+    type: 3}
 --- !u!61 &1349048919844873579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -231,6 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a520e129886b34489ce76c8f0e28f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 707451822243819800, guid: 859c50ff1151b334f9881911e80d21e7,
+    type: 3}
 --- !u!1 &9179141464394575418
 GameObject:
   m_ObjectHideFlags: 0

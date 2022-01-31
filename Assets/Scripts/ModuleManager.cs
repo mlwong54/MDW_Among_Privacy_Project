@@ -15,18 +15,14 @@ public class ModuleManager: MonoBehaviour
         checkOnce = false;
     }
 
+    public void EndGame()
+    {
+        endGame = true;
+    }
+
     // Update is called once per frame
     void Update()
-    {
-        if(endGame == false)
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                endGame = true; 
-            }
-            
-        }
-        
+    {   
         if(endGame ==true && checkOnce ==false)
         {
             AddEndScore();

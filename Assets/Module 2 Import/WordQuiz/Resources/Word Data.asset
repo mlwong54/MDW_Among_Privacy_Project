@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b762a7796d94449896cd40528add32, type: 3}
+  m_Name: Word Data
+  m_EditorClassIdentifier: 
+  questions:
+  - questionImage: {fileID: 21300000, guid: fe3d2046c0aa2d745a7ded3de49787dc, type: 3}
+    answer: security
+  - questionImage: {fileID: 21300000, guid: 36d0fe0ad324d604aabfa53b52d036ba, type: 3}
+    answer: password
+  - questionImage: {fileID: 21300000, guid: c813b47317eb9394a94c1129eb95abac, type: 3}
+    answer: privacy

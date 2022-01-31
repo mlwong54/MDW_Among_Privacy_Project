@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WordGenerator : MonoBehaviour
 {
-    private static string[] wordList = {"testing", "hello", "another"};
+    private static string[] wordList = {"secure", "breach", "spyware", "snoop" , "fake"};
 
     public static string returnWord()
     {

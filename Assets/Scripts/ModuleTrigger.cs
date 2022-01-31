@@ -8,10 +8,14 @@ public class ModuleTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (GameEvent.current.boolsCheck[id-1] == true)
+        if(collision.transform.tag == "Player")
         {
-            GameEvent.current.MinigameTrigger(id);
+            if (GameEvent.current.boolsCheck[id - 1] == true)
+            {
+                GameEvent.current.MinigameTrigger(id);
+            }
         }
+        
     }
 
 }

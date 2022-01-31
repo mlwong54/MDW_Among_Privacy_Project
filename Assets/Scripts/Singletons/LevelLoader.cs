@@ -14,11 +14,11 @@ public class LevelLoader : MonoBehaviour
 
     private enum _levelChunk
     {
-        MainLevel =2,
-        TypingModule =3,
-        Module2 =4,
-        Module3 =5,
-        Module4 =6
+        MainLevel =3,
+        TypingModule =4,
+        Module2 =5,
+        Module3 =6,
+        Module4 =7
     }
 
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
@@ -71,15 +71,29 @@ public class LevelLoader : MonoBehaviour
         LoadLevelChunk(_levelChunk.MainLevel);
     }
 
-    public void LoadGameOver()
+    public void LoadGameOverWin()
     {
         UnloadLevelChunk(_levelChunk.MainLevel);
-        SceneManager.LoadScene(7);
+        UnloadLevelChunk(_levelChunk.TypingModule);
+        UnloadLevelChunk(_levelChunk.Module2);
+        UnloadLevelChunk(_levelChunk.Module3);
+        UnloadLevelChunk(_levelChunk.Module4);
+        SceneManager.LoadScene(8);
+    }
+
+    public void LoadGameOverLose()
+    {
+        UnloadLevelChunk(_levelChunk.MainLevel);
+        UnloadLevelChunk(_levelChunk.TypingModule);
+        UnloadLevelChunk(_levelChunk.Module2);
+        UnloadLevelChunk(_levelChunk.Module3);
+        UnloadLevelChunk(_levelChunk.Module4);
+        SceneManager.LoadScene(9);
     }
 
     public void LoadModule(int id)
     {
-        id = id + 2;
+        id = id + 3;
         if(id == (int)_levelChunk.TypingModule)
         {
             UnloadLevelChunk(_levelChunk.MainLevel);

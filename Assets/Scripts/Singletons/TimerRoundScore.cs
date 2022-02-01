@@ -48,14 +48,14 @@ public class TimerRoundScore : MonoBehaviour
         if(RoundCount >=4)
         {
             Debug.Log(WinCount);
-            if (WinCount>=0)
+            if (WinCount>=500)
             {
-                Debug.Log("your wincount trigger");
+                //Debug.Log("your wincount trigger");
                 EndWinGameCondition();
             }
             else
             {
-                Debug.Log("your wincount trigger not here");
+                //Debug.Log("your wincount trigger not here");
                 EndLoseGameCondition();
             }
         }

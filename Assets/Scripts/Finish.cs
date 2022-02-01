@@ -19,11 +19,11 @@ public class Finish : MonoBehaviour
     {
         if(collision.gameObject.name == "Player" && !LevelCompleted)
         {
-            uiText.text = "you win";
+            uiText.text = "your router has reset! your traffic is now safe.";
             uiMenu.SetActive(true);
             finishSound.Play();
             LevelCompleted = true;
-            Invoke("CompleteLevel", 2f);
+            Invoke("CompleteLevel", 5.0f);
         }
 
     }

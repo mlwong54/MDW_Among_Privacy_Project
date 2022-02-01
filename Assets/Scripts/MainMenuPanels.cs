@@ -21,6 +21,7 @@ public class MainMenuPanels : MonoBehaviour
     }
     public void SetVolume(float sliderValue)
     {
+        PlayerPrefs.SetFloat("mixerVolume", sliderValue);
         myAudioMixer.SetFloat("MasterVolume", Mathf.Log10(sliderValue) * 20);
     }
 }

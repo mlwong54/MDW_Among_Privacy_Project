@@ -22,9 +22,9 @@ public class LevelManager : MonoBehaviour
             gameHasEnded = true;
             FindObjectOfType<LooseMusic>().Play();
             menu.SetActive(true);
-            UItext.text = "you lose";
-            TimerRoundScore.CurrentScoreHandler.WinTextUpdate(-500);
-            Invoke("ReturnToMain", 3.0f);
+            UItext.text = "the malware has occupied your computer! your data is in danger!";
+            TimerRoundScore.CurrentScoreHandler.WinTextUpdate(-3000);
+            Invoke("ReturnToMain", 5.0f);
         }
 
     }
@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
             gameHasEnded = true;
             FindObjectOfType<VictoryMusic>().Play();
             menu.SetActive(true);
-            UItext.text = "you win";
+            UItext.text = "you successfully deleted all the malwares! your computer is safe now!";
             TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+1000);
             Invoke("ReturnToMain", 5.0f);
         }

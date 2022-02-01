@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - Item
   - Trap
+  - Start_Tile
+  - Stop_tile
+  - Quiz-tile
+  - CoinQuiz
   layers:
   - Default
   - TransparentFX

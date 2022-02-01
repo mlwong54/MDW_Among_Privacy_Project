@@ -89,7 +89,7 @@ public class WordManager : MonoBehaviour
             Destroy(enemy);
         }
         UpdateWinScore();
-        Invoke("ReturnToMain", 2.0f);
+        Invoke("ReturnToMain", 5.0f);
     }
 
 
@@ -103,12 +103,12 @@ public class WordManager : MonoBehaviour
         winLosePanel.SetActive(true);
         if (winLose ==false)
         {
-            winLoseText.text = "YOU LOSE";
+            winLoseText.text = "YOUR ACCOUNT IS BREACHED AFTER ATTACKED BY PHISHING! YOU LOSE!";
             TimerRoundScore.CurrentScoreHandler.WinTextUpdate(-1000);
         }
         else
         {
-            winLoseText.text = "YOU WIN";
+            winLoseText.text = "YOU HAVE SECURED YOUR ACCOUNT FROM PHISHING ATTACK! YOU WIN!";
             TimerRoundScore.CurrentScoreHandler.WinTextUpdate(+500);
         }
         TimerRoundScore.CurrentScoreHandler.RoundTextUpdate();

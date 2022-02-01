@@ -27,7 +27,7 @@ public class PlayerLife : MonoBehaviour
 
     private void Die()
     {
-        uiText.text = "you lose";
+        uiText.text = "YOU FAILED TO RESTART THE ROUTER. THE HACKER HAVE POISONED YOUR TRAFFIC AND OBTAINED YOUR DATA.";
         uiMenu.SetActive(true);
         DeathSoundEffect.Play();
         anim.SetTrigger("dead");

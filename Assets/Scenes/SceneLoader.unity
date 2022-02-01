@@ -756,6 +756,7 @@ GameObject:
   - component: {fileID: 1770445524}
   - component: {fileID: 1770445523}
   - component: {fileID: 1770445525}
+  - component: {fileID: 1770445526}
   m_Layer: 0
   m_Name: Singletons
   m_TagString: Untagged
@@ -789,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f20840bf6485464985afc477bb85b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerValue: 500
+  timerValue: 600
   timerUI: {fileID: 440362528}
   roundText: {fileID: 46190770}
   winText: {fileID: 1724113487}
@@ -819,6 +820,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35768df3273f56b478f332c5805badb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1770445526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770445521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dec5f10e2456824d9d2caf5a9c4aec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAudioMixer: {fileID: 24100000, guid: 6a860f23f69005443832c17b6d14f3da, type: 2}
 --- !u!1 &1967563148
 GameObject:
   m_ObjectHideFlags: 0

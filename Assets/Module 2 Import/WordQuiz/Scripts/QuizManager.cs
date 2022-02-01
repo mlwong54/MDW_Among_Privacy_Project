@@ -148,7 +148,7 @@ public class QuizManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Game Complete"); //else game is complete
+                    //Debug.Log("Game Complete"); //else game is complete
                     StartCoroutine(EndGameCount());
                 }
             }
@@ -181,9 +181,9 @@ public class QuizManager : MonoBehaviour
 
     IEnumerator EndGameCount()
     {
-        yield return new WaitForSeconds(1.0f);
+        //yield return new WaitForSeconds(1.0f);
         gameComplete.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(5.0f);
         moduleManager.EndGame();
     }
 }
